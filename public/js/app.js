@@ -25868,7 +25868,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "C:\\Users\\Hustek\\timeline\\src\\components\\TimeLine.vue"
+	__vue_options__.__file = "C:\\Users\\Hustek\\gh-pages\\src\\components\\TimeLine.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -25879,9 +25879,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-381904b1", __vue_options__)
+	    hotAPI.createRecord("data-v-42c69bc8", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-381904b1", __vue_options__)
+	    hotAPI.reload("data-v-42c69bc8", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] TimeLine.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -25995,7 +25995,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-381904b1", module.exports)
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-42c69bc8", module.exports)
 	  }
 	}
 
@@ -26022,7 +26022,7 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "C:\\Users\\Hustek\\timeline\\src\\components\\Event.vue"
+	__vue_options__.__file = "C:\\Users\\Hustek\\gh-pages\\src\\components\\Event.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -26033,9 +26033,9 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-37a1de0c", __vue_options__)
+	    hotAPI.createRecord("data-v-333ba943", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-37a1de0c", __vue_options__)
+	    hotAPI.reload("data-v-333ba943", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] Event.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -26174,7 +26174,7 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-37a1de0c", module.exports)
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-333ba943", module.exports)
 	  }
 	}
 
