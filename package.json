@@ -1,13 +1,13 @@
 {
   "name": "timeline",
   "version": "1.0.0",
-  "description": "",
+  "description": "Timeline based on Vue 2 framework",
+  "author": "Łukasz Stukan <stukan.lukasz@gmail.com>",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp"
   },
   "keywords": [],
-  "author": "Łukasz Stukan",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.1.21",
