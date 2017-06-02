@@ -1,0 +1,27 @@
+body{
+  width: 80%;
+  margin: 50px auto;
+  font-family: 'Open Sans', sans-serif;
+  h1{
+      margin: 70px 0 120px;
+      font-weight: 400;
+      text-align: center;
+      font-size: 1.5rem;
+  }
+  time{
+    color: #c70059;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 1000px) {
+body{
+  margin: 40px auto;
+  h1{
+      margin: 50px 0 40px;
+      font-size: 1rem;
+  }
+
+}
+
+}
