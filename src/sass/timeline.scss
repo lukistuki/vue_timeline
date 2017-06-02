@@ -137,6 +137,7 @@ section.timeline{
     height: 11px;
     margin: 4px;
     background: radial-gradient(100px at center right 140px, #8ac5f2, transparent),linear-gradient(#75d8ff, #2f5a7e);
+    background: radial-gradient(100px at center right, #8ac5f2, transparent), linear-gradient(#75d8ff, #2f5a7e);
     background-blend-mode: color-dodge;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45);
     border-radius: 4px;
