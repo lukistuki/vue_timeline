@@ -39,14 +39,34 @@ Data of the timelines and events is stored in the file as a object (in the futur
 
 ### 1.Adding new data
 
+#### General informations
 Before we start - **ALL DATES SHOULD BE JAVASCRIPT OBJECTS** - `new Date("...")`
+
+For **name of the icons** check the list: http://fontawesome.io/icons/
+
+The `events` array consist of 3 element arrays.
+
+
+The single event array should consist of : `[Javascript Date Object, Event title, Font Awesome icon name]`
+
+Event `Javascript Date Object` should be  **between** startDate and endDate or **equal** startDate/endDate
+
+The `settings` object got 3 properties:
+
+* `startDate` should be the **earliest** date
+* `endDate` should be the **latest** date
+* `currentDate` should be  **between** startDate and endDate or **equal** startDate/endDate
+
+Note: *If you can't see the timeline or events, you probably passed the wrong date and the application will not display it (e.g. event's date isn't between settings dates, starting date is later then ending date of axis)*.
+
+#### We go to action
 
 Go to `src/data.js` script and pass the new object
 
 ```javascript
 myFooTimeline :  {
   events : [
-      [new Date("2017-06-01"), 'Suspendisse rhoncus ege', 'globe'],
+      [new Date("2017-06-01"), 'Suspendisse rhoncus ege', 'globe'], // [Javascript Object Date, Title of the event, Font Awesome icon name]
       [new Date("2017-06-02"), 'Sed accumsan sit', 'leaf'],
       [new Date("2017-06-15"), 'Mauris a dictum ut', 'gear'],
       //(...)

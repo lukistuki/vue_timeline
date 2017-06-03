@@ -1,5 +1,5 @@
 <template>
-    <section class="timeline">
+    <section v-if="isValid" class="timeline">
       <ol class="axis">
         <si-event v-for="event in timeline.events" :date="event[0]" :name="event[1]" :icon="event[2]" :numberOfDays="numberOfDays" :time-stamps="timeStamps"></si-event>
       </ol>
@@ -12,7 +12,8 @@
       props: ['source'],
       data(){
         return{
-            timeline : {}
+            timeline : {},
+            isValid: false
         }
       },
 
@@ -52,6 +53,11 @@
       created() {
         //Fetch the data from data.js file based on @source param of html element
         this.timeline = timelines[this.source];
+
+        this.isValid = (this.timeStamps.startDate.isBefore(this.timeStamps.endDate  ))
+                        &&
+                       (this.timeStamps.currentDate.isBetween(this.timeStamps.startDate, this.timeStamps.endDate, null, '[]'))
+                       ? true : false;
       }
     }
 </script>

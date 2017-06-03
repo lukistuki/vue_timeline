@@ -1,5 +1,5 @@
 <template>
-  <li class="event" :style="setPosition()">
+  <li v-if="isValid" class="event" :style="setPosition()">
     <div class="point" :class="{ passed: itPassed}" @click="showDescription">
       <i :class="className" aria-hidden="true"></i>
     </div>
@@ -17,6 +17,7 @@
       props: ['date', 'name', 'icon', 'numberOfDays', 'timeStamps'],
       data(){
         return{
+          isValid: false,
           isActive: false,
           itPassed: false
         }
@@ -64,6 +65,7 @@
       },
 
       created() {
+        this.isValid = this.eventDate.isBetween(this.timeStamps.startDate, this.timeStamps.endDate, null, '[]') ? true : false;
         this.itPassed = this.timeStamps.currentDate.isSameOrAfter(this.eventDate) ? true : false;
       }
     }

@@ -25912,7 +25912,8 @@
 	  props: ['source'],
 	  data: function data() {
 	    return {
-	      timeline: {}
+	      timeline: {},
+	      isValid: false
 	    };
 	  },
 
@@ -25965,6 +25966,8 @@
 	  created: function created() {
 	    //Fetch the data from data.js file based on @source param of html element
 	    this.timeline = timelines[this.source];
+
+	    this.isValid = this.timeStamps.startDate.isBefore(this.timeStamps.endDate) && this.timeStamps.currentDate.isBetween(this.timeStamps.startDate, this.timeStamps.endDate, null, '[]') ? true : false;
 	  }
 	};
 
@@ -25973,7 +25976,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('section', {
+	  return (_vm.isValid) ? _c('section', {
 	    staticClass: "timeline"
 	  }, [_c('ol', {
 	    staticClass: "axis"
@@ -25990,7 +25993,7 @@
 	  })), _vm._v(" "), _c('div', {
 	    staticClass: "progress-bar",
 	    style: (_vm.progress())
-	  })])
+	  })]) : _vm._e()
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
@@ -26071,6 +26074,7 @@
 	  props: ['date', 'name', 'icon', 'numberOfDays', 'timeStamps'],
 	  data: function data() {
 	    return {
+	      isValid: false,
 	      isActive: false,
 	      itPassed: false
 	    };
@@ -26133,6 +26137,7 @@
 	  },
 
 	  created: function created() {
+	    this.isValid = this.eventDate.isBetween(this.timeStamps.startDate, this.timeStamps.endDate, null, '[]') ? true : false;
 	    this.itPassed = this.timeStamps.currentDate.isSameOrAfter(this.eventDate) ? true : false;
 	  }
 	};
@@ -26142,7 +26147,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('li', {
+	  return (_vm.isValid) ? _c('li', {
 	    staticClass: "event",
 	    style: (_vm.setPosition())
 	  }, [_c('div', {
@@ -26169,7 +26174,7 @@
 	    }
 	  }, [_vm._v(_vm._s(_vm.formattedDate))]), _vm._v(" "), _c('div', {
 	    staticClass: "body"
-	  }, [_vm._v("\n      " + _vm._s(_vm.name) + "\n    ")])])])
+	  }, [_vm._v("\n      " + _vm._s(_vm.name) + "\n    ")])])]) : _vm._e()
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
