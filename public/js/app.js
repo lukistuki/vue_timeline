@@ -101,21 +101,21 @@
 	  },
 
 	  // Other example
-	  // Based on 14 days (01-06-2017 - 14-06-2017)
+	  // Based on 14 days (12-06-2017 - 26-06-2017)
 	  // Current day is Date.now()
 	  // To see this - go public/index.html > <si-timeline source="timeline2"> element
 
 	  timeline2 :  {
 	    events : [
-	        [new Date("2017-06-01"), 'Proin dapibus, libero ac', 'globe'],
-	        [new Date("2017-06-02"), 'Sed dignissim. Donec rutrum in', 'leaf'],
-	        [new Date("2017-06-04"), 'Morbi mauris magna', 'gear'],
-	        [new Date("2017-06-07"), 'Praesent elit purus, nec', 'film'],
-	        [new Date("2017-06-12"), 'Cras luctus et magnis di', 'gamepad'],
+	        [new Date("2017-06-12"), 'Proin dapibus, libero ac', 'globe'],
+	        [new Date("2017-06-14"), 'Sed dignissim. Donec rutrum in', 'leaf'],
+	        [new Date("2017-06-18"), 'Morbi mauris magna', 'gear'],
+	        [new Date("2017-06-20"), 'Praesent elit purus, nec', 'film'],
+	        [new Date("2017-06-24"), 'Cras luctus et magnis di', 'gamepad'],
 	    ],
 	    settings : {
-	      startDate: new Date("2017-06-01"),
-	      endDate: new Date("2017-06-14"),
+	      startDate: new Date("2017-06-12"),
+	      endDate: new Date("2017-06-26"),
 	      currentDate: Date.now()
 	    }
 	  },
