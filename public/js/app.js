@@ -1,4 +1,4 @@
-// Based on 3 months (12-06-2017 - 12-09-2017)/******/ (function(modules) { // webpackBootstrap
+/******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
